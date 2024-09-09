@@ -1,0 +1,69 @@
+section.form 
+    .form__container 
+        .form__content
+            .form__content--pilot
+                .form__content--header
+                    input(type="checkbox", id="pilot", name="service")
+                    label Dịch vụ hoa tiêu
+                    i.fa-solid.fa-chevron-up
+                .form__pilot--expand
+                    form(action)
+                        fieldset.row.justify-content-between
+                            label(for="name").col-xl-12.col-lg-12 Tên công ty*
+                            input(type="text", id="name" name="name").col-xl-12.col-lg-12
+                            p.form__pilot--expand *Tên công ty không được để trống
+                            label(for="address").col-xl-12.col-lg-12 Địa chỉ*
+                            input(type="text", id="address" name="address").col-xl-12.col-lg-12
+                            p.form__pilot--expand *Địa chỉ không được để trống 
+                            .col-xl-6.col-lg-6.form__content--padding
+                                label(for="tax").col-xl-12.col-lg-12 Mã số thuế*
+                                input(type="text", id="tax" name="tax").col-xl-12.col-lg-12
+                            .col-xl-6.col-lg-6.form__content--padding
+                                label(for="email").col-xl-6.col-lg-6 Email*
+                                input(type="email", id="email" name="email").col-xl-12.col-lg-12
+            .form__content--ship
+                .form__content--header
+                    input(type="checkbox", id="ship", name="service")
+                    label Dịch vụ dịch chuyển tàu
+                    i.fa-solid.fa-chevron-up 
+                .form__ship--expand 
+                    form(action)
+                        fieldset.row
+                            .col-xl-6.col-lg-6
+                                label(for="area").col-xl-12.col-lg-12 Khu vực cảng*
+                                select(id="area" name="area").col-xl-12.col-lg-12
+                                    option(value='') Chọn
+                                    option(value="HCM") Thành phố Hồ Chí Minh
+                                    option(value="BT") Bình Thuận
+                            .col-xl-6.col-lg-6
+                                label(for="port").col-xl-12.col-lg-12 Cảng*
+                                select(id="port" name="port").col-xl-12.col-lg-12
+                                    option(value='') Chọn
+                                    option(value="HCM-CL") Cát Lái
+                                    option(value="HCM-BD") Bạch Đằng                                     
+                            .col-xl-12.col-lg-12 Tuyến tàu
+                                br
+                                input(type="radio", id="international" name="route" checked)
+                                label(for="international" style="margin-right: 50px") Quốc tế
+                                input(type="radio", id="inland" name="route")
+                                label(for="inland") Nội địa 
+                            .col-xl-6.col-lg-6
+                                label(for="pick-up").col-xl-12.col-lg-12 Vị trí đón*
+                                select(id="pick-up" name="pick-up").col-xl-12.col-lg-12
+                                    option(value='') Chọn
+                                    option(value="CL-1") Cát Lái 1
+                                    option(value="BD-1") Bạch Đằng 2       
+                            .col-xl-6.col-lg-6
+                                label(for="drop-off").col-xl-12.col-lg-12 Vị trí trả*
+                                select(id="drop-off" name="drop-off").col-xl-12.col-lg-12
+                                    option(value='') Chọn
+                                    option(value="CL-1") Cát Lái 1
+                                    option(value="BD-1") Bạch Đằng 2      
+                            .col-xl-6.col-lg-6
+                                label(for="date").col-xl-6.col-lg-6 Ngày*
+                                input(type="date", id="date" name="date").col-xl-12.col-lg-12
+                            .col-xl-6.col-lg-6
+                                label(for="time").col-xl-6.col-lg-6 Giờ*
+                                input(type="time", id="time" name="time").col-xl-12.col-lg-12
+            .btn-submit.text-center 
+                button(type="submit") Báo giá dự kiến 

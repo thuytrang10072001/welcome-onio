@@ -1,0 +1,40 @@
+.hub__header {
+  padding: 24px;
+}
+.hub__header img {
+  width: 114px;
+  height: 34px;
+}
+
+.hub__container {
+  padding: 40px 120px;
+}
+.hub__container .hub__content {
+  height: 512px;
+  border: 1px solid #000;
+}
+.hub__container .hub__content .hub__content--title {
+  padding: 190px 70px;
+}
+.hub__container .hub__content .hub__content--title h2 {
+  font-size: 56px;
+  font-weight: 500;
+  line-height: 66px;
+  margin: 0;
+}
+.hub__container .hub__content .hub__content--check {
+  padding: 40px;
+}
+.hub__container .hub__content .hub__content--check .hub__content--list .hub__content--item input {
+  margin: 10px;
+}
+.hub__container .hub__content .hub__content--check .hub__content--list .hub__content--item .hub__content--checkmark {
+  font-size: 18px;
+  line-height: 23px;
+}
+.hub__container .hub__content .hub__content--check .hub__content--list .hub__content--item .hub__content--active span {
+  font-size: 16px;
+  line-height: 24px;
+  margin-left: 50px;
+}
+/*# sourceMappingURL=hub.css.map */

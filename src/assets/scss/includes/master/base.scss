@@ -1,0 +1,21 @@
+
+$text-neutral: #AEADAD;
+$text-orange: #FF6231;
+$text-primary: #222021;
+
+*{
+    box-sizing: border-box;
+    padding: 0 0;
+    margin: 0 0;
+
+}
+
+body{
+    height: 100vh;
+    font: {
+        weight: 500;
+        family: 'Helvetica' !important;
+    }
+    background-color: #F5F5F5;
+    ;
+}

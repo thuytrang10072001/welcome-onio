@@ -1,0 +1,279 @@
+// Mixins
+
+@mixin img-cover {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+@mixin list-unstyle {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex-direction($var) {
+  -webkit-box-orient: $var;
+  -webkit-box-direction: $var;
+  -ms-flex-direction: $var;
+  flex-direction: $var;
+}
+
+@mixin align-items($var) {
+  -webkit-box-align: $var;
+  -ms-flex-align: $var;
+  align-items: $var;
+}
+
+@mixin justify-content($var) {
+  -webkit-box-pack: $var;
+  -ms-flex-pack: $var;
+  justify-content: $var;
+}
+
+@mixin blockEllipsis($lines) {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin transition($param...) {
+  -ms-transition: $param;
+  -o-transition: $param;
+  -moz-transition: $param;
+  -webkit-transition: $param;
+  transition: $param;
+}
+
+@mixin transform($param...) {
+  -ms-transform: $param;
+  -o-transform: $param;
+  -moz-transform: $param;
+  -webkit-transform: $param;
+  transform: $param;
+}
+
+@mixin border-radius($param) {
+  -webkit-border-radius: $param;
+  -moz-border-radius: $param;
+  border-radius: $param;
+}
+
+@mixin box-shadow($param...) {
+  -webkit-box-shadow: $param;
+  -moz-box-shadow: $param;
+  box-shadow: $param;
+}
+
+@mixin flex-column($param...) {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 $param;
+  flex: 0 0 $param;
+  max-width: $param;
+}
+
+@mixin center-content() {
+  position: absolute;
+  top: 50%;
+  @include transform(translateY(-50%));
+}
+
+@mixin mid-content() {
+  position: absolute;
+  left: 50%;
+  @include transform(translateX(-50%));
+}
+
+@mixin mid-center-content() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include transform(translate(-50%, -50%));
+}
+
+@mixin animation($param...) {
+  animation: $param;
+  -webkit-animation: $param;
+}
+
+@mixin object-fit($var) {
+  -o-object-fit: $var;
+  object-fit: $var;
+}
+
+@mixin flex($var) {
+  -webkit-box-flex: $var;
+  -ms-flex: $var;
+  flex: $var;
+}
+
+@mixin flex-wrap($var) {
+  -ms-flex-wrap: $var;
+  flex-wrap: $var;
+}
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+// media query declarations
+// desktop first
+
+// Large devices (desktops, less than 1200px)
+@mixin for-lg {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@mixin for-md {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+// Only Tablet
+@mixin for-tablet {
+ @media (min-width: 576px) and (max-width: 991.98px) {
+    @content;
+  }
+}
+
+// Small devices (landscape phones, less than 768px)
+@mixin for-sm {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+@mixin for-xs {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+// Extra small phone (portrait phones, less than 375px, exp: iPhone 5)
+@mixin for-sp {
+  @media (max-width: 374.98px) {
+    @content;
+  }
+}
+
+@mixin min-sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin min-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin min-lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin min-xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+// custom
+@mixin vertical-scrollbar($bg:transparent, $thumb: $light-grey) {
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar-track {
+    background-color: $bg;
+  }
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: $bg;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: $thumb;
+  }
+}
+@mixin horizontal-scrollbar($bg:transparent) {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  &::-webkit-scrollbar-track {
+    background-color: $bg;
+  }
+  &::-webkit-scrollbar {
+    height: 6px;
+    background-color: $bg;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: $light-grey;
+  }
+}
+
+
+// custom
+// padding hack
+@mixin padding-hack($padding-top) {
+  .img {
+    padding-top: $padding-top;
+    position: relative;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      @include transform(translate(-50%, -50%));
+      @include img-cover;
+    }
+  }
+  
+}

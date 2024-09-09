@@ -1,0 +1,119 @@
+@import "variables";
+@import "mixins";
+
+body {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  color: $black;
+  font-family: "UTM Avo";
+}
+
+h1,
+.h1 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.4;
+  @include min-lg {
+    font-size: 28px;
+    line-height: 1.43;
+  }
+}
+
+h2,
+.h2 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.5;
+  @include min-lg {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+}
+.title-2 {
+  @extend .h2;
+  font-weight: bold;
+}
+h3,
+.h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  @include min-lg {
+    font-size: 18px;
+  }
+}
+
+h4,
+.h4 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.text-md {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+.text-small,
+small {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.text-tab {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.43;
+}
+a {
+  outline: none;
+  color: inherit;
+  text-decoration: none;
+  @include transition(color 0.4s ease);
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    color: $brand-green;
+  }
+}
+.text-link {
+  font-style: normal;
+  font-weight: inherit;
+  font-size: 14px;
+  line-height: 1.43;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    text-decoration: none;
+    color: $brand-green;
+  }
+}
+
+.text-link {
+  text-decoration: underline;
+}
+
+.has-text-link {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+  @include flex-wrap(wrap);
+  .text-link {
+    display: block;
+    margin-top: 10px;
+    @include min-lg {
+      display: inline-block;
+      margin-top: 0;
+    }
+  }
+}

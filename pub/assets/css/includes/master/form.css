@@ -1,0 +1,68 @@
+.form__container {
+  padding: 5vh 20%;
+  background-color: #F0F8FF;
+  height: 100vh;
+}
+.form__container .form__content {
+  font-size: 16px;
+  font-weight: 400;
+}
+.form__container .form__content .form__content--header {
+  position: relative;
+}
+.form__container .form__content .form__content--header label {
+  color: rgb(49, 100, 121);
+  margin-left: 10px;
+}
+.form__container .form__content .form__content--header input:hover {
+  cursor: pointer;
+}
+.form__container .form__content .form__content--header i {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 30px;
+  color: #A2A2A2;
+  display: none;
+}
+.form__container .form__content .form__content--pilot {
+  background-color: white;
+  padding: 5%;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.0196078431);
+  border-radius: 10px;
+  margin-bottom: 3vh;
+}
+.form__container .form__content .form__content--pilot .form__pilot--expand {
+  display: none;
+}
+.form__container .form__content .form__content--pilot .form__pilot--expand fieldset {
+  margin: 0;
+}
+.form__container .form__content .form__content--pilot .form__pilot--expand fieldset > label {
+  padding: 0;
+}
+.form__container .form__content .form__content--pilot .form__pilot--expand fieldset .form__content--padding {
+  padding: 0 10px 0 0;
+}
+.form__container .form__content .form__content--ship {
+  background-color: white;
+  padding: 5%;
+  box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.0196078431);
+  border-radius: 10px;
+  margin-bottom: 5%;
+}
+.form__container .form__content .form__content--ship .form__ship--expand {
+  display: none;
+}
+.form__container .form__content .form__content--ship .form__ship--expand fieldset {
+  height: 250px;
+}
+.form__container .form__content .btn-submit button {
+  padding: 5px 10%;
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background: linear-gradient(263.81deg, #4858EF -3.68%, #1BB5EC 108.73%);
+}
+/*# sourceMappingURL=form.css.map */

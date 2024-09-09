@@ -1,0 +1,18 @@
+doctype html
+html(lang="en")
+    head
+        title= "Document"
+        include master/head.pug
+        block head
+    body
+        include master/header.pug
+        include includes/icons.pug
+        .page__container
+            block content
+        include master/popup.pug
+        include master/footer.pug
+        include master/foot.pug
+        block foot
+
+
+           

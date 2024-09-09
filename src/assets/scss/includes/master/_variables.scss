@@ -1,0 +1,25 @@
+$text-color: #2F3236;
+// brand colors
+$brand-green: #51AC31;
+$brand-light-green: #EBECB9;
+$brand-grey: #434546;
+//System Colors
+$black: #1D1E20;
+$grey: #5F6771;
+$light-grey: #C6CCD3;
+$lighter-grey: #EAEEF2;
+$lighten-grey: #F5F5F7;
+$white: #ffffff;
+$img-overlay: #ADADAD;
+$red: #FF5050;
+$yellow: #FDD000;
+//Green Color scale
+$dark-green: #1b703b;
+$green: #70BE50;
+$light-green: #8ECF70;
+$lighter-green: #E7F6DC;
+
+@mixin green-shadow {
+  -webkit-box-shadow: 0px 4px 14px rgba(27, 112, 59, 0.15);
+  box-shadow: 0px 4px 14px rgba(27, 112, 59, 0.15);
+}
